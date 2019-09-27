@@ -37,6 +37,7 @@ public class MyCountlesston {
     }
 
     public <O>void addToRequestQueue(Request<O> request) {
+        mRequestQueue.getCache().clear();
         mRequestQueue.add(request);
     }
 }

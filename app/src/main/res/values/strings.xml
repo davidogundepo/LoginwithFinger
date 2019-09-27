@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Login with Finger</string>
+    <string name="hello_amazing">Hello Amazing</string>
+    <string name="icdat_christ">icdat.christ</string>
+    <string name="pin_4_digits" />
+    <string name="access">Access</string>
+    <string name="not_entered">not Entered</string>
+    <string name="not_entered2">DV</string>
+    <string name="clearalll">ClearAll</string>
+    <string name="clearall">Clear All</string>
+    <string name="portrait_orientation_locked">Locked</string>
+    <string name="portrait_orientation_unlocked">Unlocked</string>
 </resources>

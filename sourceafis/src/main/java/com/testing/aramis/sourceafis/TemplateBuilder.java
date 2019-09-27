@@ -13,7 +13,7 @@ import java.util.stream.*;
 import com.google.gson.*;
 //import com.machinezoo.noexception.*;
 
-class TemplateBuilder {
+public class TemplateBuilder {
 	FingerprintTransparency transparency = FingerprintTransparency.none;
 	Cell size;
 	Minutia[] minutiae;

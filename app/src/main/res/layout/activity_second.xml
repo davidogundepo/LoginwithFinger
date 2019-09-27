@@ -26,4 +26,68 @@
         android:id="@+id/acc"
         android:text="Accountbalance"/>
 
+    <ScrollView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:id="@+id/fing"
+            android:text="Finge"/>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:id="@+id/fing_2"
+            android:text="Finge"/>
+    </ScrollView>
+    <ScrollView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:id="@+id/fing_3"
+            android:text="Finge"/>
+    </ScrollView>
+    <ScrollView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:id="@+id/fing_4"
+            android:text="Finge"/>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/compareFinger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="getTemp"
+        android:visibility="gone"
+        android:text="Butting" />
+
+
+    <Button
+        android:id="@+id/getTempFinger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="compare"
+        android:visibility="gone"
+        android:text="Compare" />
+
+
 </LinearLayout>

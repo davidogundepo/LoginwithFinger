@@ -3,4 +3,14 @@
     <color name="colorPrimary">#42A5F5</color>
     <color name="colorPrimaryDark">#2196F3</color>
     <color name="colorAccent">#1E88E5</color>
+    <color name="HelloAmazingLogin">#FFFFFF</color>
+    <color name="ClockColor">#FFFFFF</color>
+    <color name="EditTextColorLogin">#CFD8DC</color>
+    <color name="LoginColor.Access">#FFFFFF</color>
+    <color name="VendorLoginName.BackgroundOne">#2E7D32</color>
+    <color name="VendorLoginName.BackgroundTwo">#81C784</color>
+    <color name="AccessButtonBackgroundColor">#4CAF50</color>
+    <color name="AccessButtonBackgroundStrokeColor">#B0BEC5</color>
+    <color name="EditTextStatus">#FFFFFF</color>
+    <color name="ConfirmIDColorLogin">#B0BEC5</color>
 </resources>

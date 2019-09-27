@@ -1,7 +1,7 @@
 // Part of SourceAFIS: https://sourceafis.machinezoo.com
 package com.testing.aramis.sourceafis;
 
-class ImmutableTemplate {
+public class ImmutableTemplate {
 	static final ImmutableTemplate empty = new ImmutableTemplate();
 	final Cell size;
 	final Minutia[] minutiae;

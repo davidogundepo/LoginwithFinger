@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/c_loginactivity"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="#1A685F"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:paddingBottom="60dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/loginactivity_motivationlayoutcolour"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_amazing"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:padding="80dp"
+            android:textSize="40sp"
+            android:textColor="@color/HelloAmazingLogin"
+            android:id="@+id/RandomMotivation" />
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textSize="45sp"
+        android:layout_gravity="center"
+        android:textColor="@color/ClockColor"
+        android:textAlignment="center"
+        android:id="@+id/HiddenCurrentTyme"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_marginTop="600dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+
+        <com.alimuzaffar.lib.widgets.AnimatedEditText
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal|center"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/Usernamefield"
+            android:drawableStart="@drawable/a_username_b"
+            android:drawablePadding="1dp"
+            android:width="400dp"
+            android:paddingStart="3dp"
+            android:paddingEnd="10dp"
+            android:background="@color/EditTextColorLogin"
+            android:hint="@string/icdat_christ"
+            app:animationType="fromRight"
+            app:animateCursor="true"
+            app:animateTextClear="true"
+            android:textSize="25sp"
+            android:layout_marginBottom="100dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_gravity="center_horizontal|center"
+            android:gravity="bottom"
+            android:layout_width="200dp"
+            android:src="@drawable/fp_coloured_five"
+            android:layout_marginBottom="100dp"
+            android:layout_height="200dp" />
+
+        <Button
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="@string/access"
+            android:id="@+id/loginbutton"
+            android:onClick="AccessifCorrect"
+            android:textColor="@color/LoginColor.Access"
+            android:textSize="20sp"
+            android:background="@drawable/roundcornerbutton_loginactivity"
+            android:padding="20dp"
+            android:layout_marginBottom="150dp" />
+
+    </LinearLayout>
+
+    <com.alimuzaffar.lib.widgets.AnimatedEditText
+        android:drawablePadding="10dp"
+        android:textSize="25sp"
+        android:layout_width="300dp"
+        android:layout_height="42dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/Passwordfield"
+        android:visibility="gone"
+        android:background="@color/EditTextColorLogin"
+        android:drawableStart="@drawable/a_pin_b"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:hint="@string/pin_4_digits"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="174dp"
+        android:layout_above="@+id/loginbutton"
+        android:layout_alignEnd="@+id/reportUserName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/not_entered"
+        android:visibility="gone"
+        android:textColor="@color/EditTextStatus"
+        android:id="@+id/reportPassWord"
+        android:layout_marginTop="54dp"
+        android:layout_below="@+id/Usernamefield"
+        android:layout_alignEnd="@+id/Passwordfield" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/not_entered2"
+        android:visibility="gone"
+        android:textColor="@color/EditTextStatus"
+        android:id="@+id/reportUserName"
+        android:layout_marginBottom="49dp"
+        android:layout_above="@+id/reportPassWord"
+        android:layout_alignEnd="@+id/Usernamefield" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/a_loginedittextclearer_b"
+        android:id="@+id/clearAllUsername"
+        android:visibility="gone"
+        android:layout_alignTop="@+id/Usernamefield"
+        android:layout_toEndOf="@+id/Usernamefield"
+        android:layout_alignBottom="@+id/Usernamefield"
+        android:background="@color/ConfirmIDColorLogin"
+        android:contentDescription="@string/clearalll" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/a_loginedittextclearer_b"
+        android:id="@+id/clearAllPin"
+        android:visibility="gone"
+        android:layout_below="@+id/Usernamefield"
+        android:layout_toEndOf="@+id/Passwordfield"
+        android:layout_alignBottom="@+id/Passwordfield"
+        android:background="@color/ConfirmIDColorLogin"
+        android:contentDescription="@string/clearall" />
+
+</LinearLayout>

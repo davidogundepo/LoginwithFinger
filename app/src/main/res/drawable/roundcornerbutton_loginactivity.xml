@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--item android:state_focused="true" android:drawable="@color/colorPrimary" /-->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- make a gradient background-->
+            <gradient
+                android:type="linear"
+                android:startColor="@color/AccessButtonBackgroundColor"
+                android:endColor="@color/AccessButtonBackgroundColor"
+                android:centerColor="@color/AccessButtonBackgroundColor"
+                android:angle="90"
+                android:gradientRadius="90"/>
+
+            <!-- apply a border around button-->
+            <stroke android:color="@color/AccessButtonBackgroundStrokeColor"
+                android:width="2dp" />
+            <!-- make the button corners rounded -->
+            <corners android:radius="25dp" />
+        </shape>
+    </item>
+
+
+    <!--item android:state_pressed="true" android:drawable="@color/loginbuttoncolor" />
+    <item android:drawable="@color/colorPrimary" /-->
+</selector>

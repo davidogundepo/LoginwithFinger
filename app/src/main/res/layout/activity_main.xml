@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="40dp"
+            android:layout_margin="30dp"
             android:text="Welcome, ADMIN"
             android:id="@+id/fingerUpdate"
             android:textAlignment="center"
@@ -33,10 +33,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="40dp"
         android:hint="Reg. Number"
-        android:inputType="text"
+        android:inputType="number"
         android:textColor="#FFFFFF"
         android:textColorHint="#42A5F5" />
 
@@ -52,14 +52,21 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#42A5F5" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:textColor="#1E88E5"
-        android:padding="20dp"
-        android:id="@+id/scannerStatus"
-        android:text="Have"/>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        app:cardBackgroundColor="#1E88E5"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
+            android:padding="20dp"
+            android:id="@+id/scannerStatus"
+            android:text="Have"/>
+    </android.support.v7.widget.CardView>
+
 
     <Button
         android:layout_width="match_parent"
@@ -68,14 +75,17 @@
         android:fontFamily="cursive"
         android:onClick="getFinger"
         android:text="Get Finger"
+        android:visibility="gone"
         android:textColor="#FFFFFF"
         android:textSize="20dp" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:padding="8dp"
-        android:id="@+id/leftThumb_fp"
+        android:id="@+id/rightIndex_fp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="140dp"
         android:src="@drawable/index_right" />
 
     <Button
@@ -83,13 +93,30 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:background="#2196F3"
         android:fontFamily="cursive"
         android:gravity="center"
+        android:id="@+id/accessNext"
         android:onClick="fetchFromDB"
         android:text="Access"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:background="#2196F3"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:onClick="comFing"
+        android:visibility="gone"
+        android:text="CompareFing"
         android:textColor="#FFFFFF"
         android:textSize="20dp" />
 

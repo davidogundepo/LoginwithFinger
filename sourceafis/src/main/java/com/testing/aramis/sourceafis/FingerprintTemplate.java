@@ -26,7 +26,7 @@ import com.google.gson.*;
  * {@code FingerprintTemplate} contains two kinds of data: fingerprint features and search data structures.
  * Search data structures speed up matching at the cost of some RAM.
  * Only fingerprint features are serialized. Search data structures are recomputed after every deserialization.
- * 
+ *
  * @see <a href="https://sourceafis.machinezoo.com/">SourceAFIS overview</a>
  * @see FingerprintMatcher
  */
@@ -47,11 +47,11 @@ public class FingerprintTemplate {
 	 * Enable algorithm transparency.
 	 * Subsequent operations on this template will report intermediate data structures created by the algorithm
 	 * to the provided {@link FingerprintTransparency} instance.
-	 * 
+	 *
 	 * @param transparency
 	 *            target {@link FingerprintTransparency} or {@code null} to disable algorithm transparency
 	 * @return {@code this} (fluent method)
-	 * 
+	 *
 	 * @see FingerprintTransparency
 	 */
 	public FingerprintTemplate transparency(FingerprintTransparency transparency) {
@@ -62,11 +62,11 @@ public class FingerprintTemplate {
 	 * Set DPI (dots per inch) of the fingerprint image.
 	 * This is the DPI of the image later passed to {@link #create(byte[])}.
 	 * Check your fingerprint reader specification for correct DPI value. Default DPI is 500.
-	 * 
+	 *
 	 * @param dpi
 	 *            DPI of the fingerprint image, usually around 500
 	 * @return {@code this} (fluent method)
-	 * 
+	 *
 	 * @see #create(byte[])
 	 */
 	public FingerprintTemplate dpi(double dpi) {
@@ -78,11 +78,11 @@ public class FingerprintTemplate {
 	 * Image must contain black fingerprint on white background at the DPI specified by calling {@link #dpi(double)}.
 	 * All image formats supported by Java's ImageIO are accepted, for example JPEG, PNG, or BMP,	 * <p>
 	 * This method replaces any previously added biometric data in this template.
-	 * 
+	 *
 	 * @param image
 	 *            fingerprint image in ImageIO-supported format
 	 * @return {@code this} (fluent method)
-	 * 
+	 *
 	 * @see #dpi(double)
 	 */
 	public FingerprintTemplate create(byte[] image) {
@@ -100,11 +100,11 @@ public class FingerprintTemplate {
 	 * Applications should re-extract all templates from original raw images when upgrading SourceAFIS.
 	 * <p>
 	 * This method replaces any previously added biometric data in this template.
-	 * 
+	 *
 	 * @param json
 	 *            serialized fingerprint template in JSON format produced by {@link #serialize()}
 	 * @return {@code this} (fluent method)
-	 * 
+	 *
 	 * @see #serialize()
 	 * @see <a href="https://sourceafis.machinezoo.com/template">Template format</a>
 	 */
@@ -129,9 +129,9 @@ public class FingerprintTemplate {
 	 * Applications should preserve raw fingerprint images, so that templates can be re-extracted after SourceAFIS upgrade.
 	 * Template format for current version of SourceAFIS is
 	 * <a href="https://sourceafis.machinezoo.com/template">documented on SourceAFIS website</a>.
-	 * 
+	 *
 	 * @return serialized fingerprint template in JSON format
-	 * 
+	 *
 	 * @see #deserialize(String)
 	 * @see <a href="https://sourceafis.machinezoo.com/template">Template format</a>
 	 */
@@ -158,11 +158,11 @@ public class FingerprintTemplate {
 	 * Application developers are encouraged to collect, store, and transfer fingerprints as images.
 	 * Besides compatibility and simplicity this brings,
 	 * use of images allows SourceAFIS to co-tune its feature extractor and matcher for higher accuracy.
-	 * 
+	 *
 	 * @param iso
 	 *            ISO 19794-2 template to import
 	 * @return {@code this} (fluent method)
-	 * 
+	 *
 	 * @see #create(byte[])
 	 * @see #deserialize(String)
 	 * @see #serialize()

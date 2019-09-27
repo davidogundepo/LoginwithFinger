@@ -12,7 +12,7 @@ import gnu.trove.map.hash.*;
  * New matcher is created by passing probe fingerprint template to {@link #index(FingerprintTemplate)}
  * on an empty fingerprint matcher instantiated  with {@link #FingerprintMatcher()} constructor.
  * Candidate fingerprint templates are then passed one by one to {@link #match(FingerprintTemplate)}.
- * 
+ *
  * @see <a href="https://sourceafis.machinezoo.com/">SourceAFIS overview</a>
  * @see FingerprintTemplate
  */
@@ -24,7 +24,7 @@ public class FingerprintMatcher {
 	 * Empty matcher does not match any {@link FingerprintTemplate} passed to {@link #match(FingerprintTemplate)}.
 	 * You can call {@link #index(FingerprintTemplate)} to index probe fingerprint
 	 * and {@link #match(FingerprintTemplate)} to match it to some candidate fingerprint.
-	 * 
+	 *
 	 * @see #index(FingerprintTemplate)
 	 */
 	public FingerprintMatcher() {
@@ -33,11 +33,11 @@ public class FingerprintMatcher {
 	 * Enable algorithm transparency.
 	 * Subsequent operations on this matcher will report intermediate data structures created by the algorithm
 	 * to the provided {@link FingerprintTransparency} instance.
-	 * 
+	 *
 	 * @param transparency
 	 *            target {@link FingerprintTransparency} or {@code null} to disable algorithm transparency
 	 * @return {@code this} (fluent method)
-	 * 
+	 *
 	 * @see FingerprintTransparency
 	 */
 	public FingerprintMatcher transparency(FingerprintTransparency transparency) {
@@ -50,11 +50,11 @@ public class FingerprintMatcher {
 	 * <p>
 	 * This method is heavy in terms of RAM footprint and CPU usage.
 	 * Initialized {@code FingerprintMatcher} should be reused for multiple {@link #match(FingerprintTemplate)} calls in 1:N matching.
-	 * 
+	 *
 	 * @param probe
 	 *            probe fingerprint template to be matched to candidate fingerprints
 	 * @return {@code this} (fluent method)
-	 * 
+	 *
 	 * @see #match(FingerprintTemplate)
 	 */
 	public FingerprintMatcher index(FingerprintTemplate probe) {
@@ -109,11 +109,11 @@ public class FingerprintMatcher {
 	 * Threshold must be tailored to the needs of the application.
 	 * <p>
 	 * This method is thread-safe. Multiple threads can match candidates against single {@code FingerprintMatcher}.
-	 * 
+	 *
 	 * @param candidate
 	 *            fingerprint template to be matched with probe fingerprint indexed by this {@code FingerprintMatcher}
 	 * @return similarity score between probe and candidate fingerprints
-	 * 
+	 *
 	 * @see #index(FingerprintTemplate)
 	 */
 	public double match(FingerprintTemplate candidate) {
